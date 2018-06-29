@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" class="{{#if settings.isBeta}}{{#if isHomepage}} has-beta-warning{{/if}}{{/if}}">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Experian - {{title}}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="robots" content="noindex" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" /> {{!--
+	<link href="{{{assetRoot}}}css/main.css?v={{{deployVersion}}}" rel="stylesheet" /> --}}
+	<link rel="apple-touch-icon" sizes="180x180" href="{{{assetRoot}}}img/apple-touch-icon.png?v=newbrandv1" />
+	<link rel="icon" type="image/png" href="{{{assetRoot}}}img/favicon-32x32.png?v=newbrandv1" sizes="32x32" />
+	<link rel="icon" type="image/png" href="{{{assetRoot}}}img/favicon-16x16.png?v=newbrandv1" sizes="16x16" />
+	<link rel="manifest" href="/manifest/manifest.json" />
+	<meta name="theme-color" content="#ffffff" />
+	<meta name="apple-itunes-app" content="app-id=1246829542" />
+
+	<noscript>
+		<style>
+			.no-js-results {
+				visibility: visible;
+			}
+		</style>
+	</noscript>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1 id="dateDisplay"></h1>
+		</div>
+		{{!-- <ol class="breadcrumb">
+			<li class="breadcrumb-item active">Car lookup</li>
+			<li class="breadcrumb-item">
+				<a href="#">Vehicle use</a>
+			</li>
+			<li class="breadcrumb-item">
+				<a href="#">Driver details</a>
+				</li>
+		</ol> --}}
+		<main>
+			<div id="main-content">
+				{{{body}}}
+			</div>
+		</main>
+
+</body>
+
+	<script>
+    var today = new Date();
+    var day = today.getDay();
+    var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+    document.getElementById("dateDisplay").innerHTML += daylist[day] + " " + today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
+	</script>
+</html>

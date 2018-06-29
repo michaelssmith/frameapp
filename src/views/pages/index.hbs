@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  {{!--
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous"> --}}
+  <link rel="stylesheet" href="css/sketchy.css" media="screen">
+  <title>{{ title }}</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <h2>{{ title }}</h2>
+
+    <div id="weatherDisplay"></div>
+
+    <div class="form-group">
+      <label class="col-form-label col-form-label-lg" for="inputLarge">Enter registration</label>
+      <div class="row">
+        <div class="col-4">
+          <input class="form-control form-control-lg regText" type="text" placeholder="registration" id="inputLarge">
+        </div>
+        <div class="col-2">
+          {{!-- <button id="search" onClick="searchClick()">Search</button> --}}
+          <button id="searchButton">Search</button>
+        </div>
+        <div class="col-2">
+          {{!-- <button id="manualLookup" onClick="manualLookupClick()">Manual lookup</button> --}}
+          <button id="manualLookupButton">Manual lookup</button>
+        </div>
+      </div>
+
+      <br>
+      <div class="specificVehicleNotFound" style="display: none;">
+        <h3>Vehicle not found</h3>
+      </div>
+      <div class="specificVehicle" style="display: none;">
+        <div class="row ">
+          <h4 class="col-2">Make:</h3>
+            <div class="col-4" id="carmake"></div>
+        </div>
+        <div class="row ">
+          <h4 class="col-2">Model:</h3>
+            <div class="col-4" id="carmodel"></div>
+        </div>
+        <div class="row ">
+          <h4 class="col-2">Style:</h3>
+            <div class="col-4" id="carstyle"></div>
+        </div>
+        <div class="row ">
+          <h4 class="col-2">Doors:</h3>
+            <div class="col-4" id="cardoors"></div>
+        </div>
+        <div class="row ">
+          <h4 class="col-2">Fuel:</h3>
+            <div class="col-4" id="carfuel"></div>
+        </div>
+        <div class="row ">
+          <h4 class="col-2">Transmission:</h3>
+            <div class="col-4" id="cartrans"></div>
+        </div>
+        <br>
+      </div>
+
+      <div class="manualLookup" style="display: none;">
+        <div class="row ">
+          <h4 class="col-2 offset-1">Manufacturer:</h3>
+            <select class="col-3 offset-1" id="manufacturers"></select>
+        </div>
+        <div class="row modelRow" style="display: none;">
+          <h4 class="col-2 offset-1">Model:</h3>
+            <select class="col-3 offset-1" id="models"></select>
+        </div>
+        <div class="row trimRow" style="display: none;">
+          <h4 class="col-2 offset-1">Trim:</h3>
+            <select class="col-3 offset-1" id="trims"></select>
+        </div>
+        <div class="row abiRow" style="display: none;">
+          <h4 class="col-2 offset-1">Abi Code:</h3>
+            <div class="col-3 offset-1" id="abicode"></div>
+        </div>
+      </div>
+      <br>
+    </div>
+
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+      <script src="js/carlookup.js"></script>
+</body>
+
+</html>
